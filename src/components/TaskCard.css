@@ -1,0 +1,48 @@
+/* Task Card Base Styling */
+.task-card {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-bg-color, #ffffff); /* Default light mode background */
+    color: var(--text-color, #000000); /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode overrides */
+  body[data-theme="dark"] .task-card {
+    background-color: #1e1e1e;
+    color: #ffffff; /* White text for dark mode */
+  }
+  
+  .task-card.task-done {
+    text-decoration: line-through;
+    color: #888888; /* Gray out text when done */
+  }
+  
+  /* Task Title */
+  .task-name {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  /* Task Description */
+  .task-description {
+    margin-bottom: 8px;
+    color: inherit;
+  }
+  
+  /* Task Estimate and Delegable Status */
+  .task-estimate,
+  .task-delegable {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4caf50; /* Green for highlights */
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+  
